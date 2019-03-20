@@ -1,0 +1,8 @@
+#for setting mouse scrolling to natural on horizontal axis
+#list all the props connected
+xinput list
+#find the device among the list which is acting as trackpad and in case of mac there were 3 listed and two were virtual devices.and bcm5974 was the physical device. 
+#The given below command shows the device funstionality for different physical actions
+xinput list-props bcm5974
+#among those the scrolling was designated to the code 292 so I changed that one to both -237(first 237 was for vertical and second one was for horizontal)
+xinput set-prop bcm5974 292 -237, -237
